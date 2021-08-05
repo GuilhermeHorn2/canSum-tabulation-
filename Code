@@ -1,0 +1,10 @@
+def g(m,n):
+    l = [True]
+    for i in range(m):
+        l.append(False)
+    for i in range(len(l)):
+        if l[i] == True:
+            for num in n:
+                if i + num in range(len(l)):
+                    l[i + num] = True
+    return l[m]
